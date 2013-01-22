@@ -1,0 +1,4 @@
+
+
+L = thisComp.layer("Mao")
+P = L.toWorld(L.anchorPoint);
