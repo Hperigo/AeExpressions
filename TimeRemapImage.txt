@@ -1,0 +1,7 @@
+target = thisComp.layer("Time_Map_Comp")
+p = position
+ 
+color = target.sampleImage(p , [.5,.5], true, time)[0];
+
+factor = thisComp.layer("Null 1").effect("World_time")("Slider")
+value = time -  (color*thisComp.duration) * factor ;
