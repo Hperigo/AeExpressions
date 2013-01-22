@@ -1,0 +1,5 @@
+myPath = "c://Documents and Settings/bijari/Desktop/Coisas_Henrique/1.txt";
+
+
+$.evalFile (myPath);
+eval(thisComp.name)[1]
