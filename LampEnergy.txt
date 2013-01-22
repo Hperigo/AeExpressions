@@ -1,0 +1,7 @@
+myPath = "d://Institucional/Micro_scapes/lamp_energy.txt";
+
+
+$.evalFile (myPath); 
+frame = "frame"+ timeToFrames(time)
+
+value = eval(frame)*100
