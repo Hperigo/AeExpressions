@@ -1,0 +1,42 @@
+// counter with commas
+
+startVal = 0;
+endVal = 30000;
+
+timeToStart = thisComp.marker.key("1").time;
+timeToEnd = thisComp.marker.key("2").time;
+
+if ((time>timeToStart) && (timeToEnd>time)){
+
+s=""+Math.round(linear(time, timeToStart, timeToEnd, startVal, endVal));
+if (s.length > 6) {
+s.substr(0,s.length-6) + "," + s.substr(-6,3) + "," + s.substr(-3,3)
+}else if (s.length > 3) {
+s.substr(0,s.length-3) + "," + s.substr(-3,3)
+}else{
+s
+}
+
+} else if (time< timeToStart) {
+
+s=""+startVal;
+if (s.length > 6) {
+s.substr(0,s.length-6) + "," + s.substr(-6,3) + "," + s.substr(-3,3)
+}else if (s.length > 3) {
+s.substr(0,s.length-3) + "," + s.substr(-3,3)
+}else{
+s
+}
+
+}else {
+
+s=""+endVal;
+if (s.length > 6) {
+s.substr(0,s.length-6) + "," + s.substr(-6,3) + "," + s.substr(-3,3)
+}else if (s.length > 3) {
+s.substr(0,s.length-3) + "," + s.substr(-3,3)
+}else{
+s
+}
+
+}
