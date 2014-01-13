@@ -1,0 +1,21 @@
+// 'myTime' restarts time to 0 at each layer marker
+n = 1;
+if (marker.numKeys > 0) {
+n = thisLayer.marker.nearestKey(time).index;
+if (time < marker.key(n).time && !(n == 1)){
+markerTime = marker.key(n-1).time;
+} else {
+markerTime = marker.key(n).time;
+};
+myTime = time - markerTime;
+};
+
+// code for whatever you want to mix with time/myTime
+xPos = content("Ellipse 1").transform.position.valueAtTime(0);
+movement = myTime*thisComp.layer("slider").effect("speed")("Slider");
+y = content("Ellipse 1").transform.position;
+x = xPos - movement;
+
+[x[0], y[1]];
+
+
