@@ -1,0 +1,45 @@
+// source-text-layer : source text
+
+"THE facts at hand presumably speak for themselves, but a trifle more vulgarly, I suspect, than facts even usually do. As a counterbalance, then, we begin with that everfresh and exciting odium: the author's formal introduction. The one I have in mind not only is wordy and earnest beyond my wildest dreams but is, to boot, rather excruciatingly personal. If, with the right kind of luck, it comes off, it should be comparable in effect to a compulsory guided tour through the engine room, with myself, as guide, leading the way in an old one-piece Jantzen bathing suit."
+
+
+
+// expression-text-layer : source text
+
+t = timeToFrames(time);
+
+str = thisComp.layer('source-text-layer').text.sourceText;
+
+array = str.split(" ");
+len = array.length;
+if (t >= len){
+"";
+}else{
+array[t];
+};
+
+
+
+// expression-text-layer : position
+
+t = timeToFrames(time);
+
+y = transform.position[1];
+x = transform.position[0];
+
+str = thisComp.layer('source-text-layer').text.sourceText;
+
+array = str.split(" ");
+len = array.length;
+if (t >= len){
+[x,y];
+}else{
+minLength = array[t].length;
+if (minLength > 5){
+l = minLength*8;
+}else{
+l = minLength;
+};
+x = transform.position[0] + l;
+[x,y];
+};
